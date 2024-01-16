@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <script>
+        document.addEventListener('DOMContentLoases',function(){
+            const openFormButton = document.getElementById('openform');
+            const closeFormButton = document.getElementById('');
+            const formContainer = document.getElementById('formcontainer');
+
+            openFormButton.addEventListener('click',function(){
+                formContainer.style.display = 'block';
+            });
+
+            closeFormButton.addEventListener('click',function(){
+                formContainer.style.display='none';
+            });
+            });
+
+        
+    </script>
+    <style>
+        input{
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+        #formcontainer{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body>
+    <div id="formContainer">
+    <form style="border: 1px solid; width: 500px; padding: 10px;">
+        <h1 style="text-align: center;">Test Drive</h1>
+        <p style="text-align: center;">Complete the form below to book your test drive.</p>
+
+           <p style="text-align: center;"> Fields marked with * are required.</p>
+    
+        *<input placeholder="FIRSTNAME" type="text" name="firstname" required><br>
+        
+        *<input placeholder="LASTNAME" type="text" name="lastname" required><br>
+        
+        *<input placeholder="EMAIL" type="email" name="email" required><br>
+        
+        *<input placeholder="MOBILE" type="tel" name="mobile number" required><br>
+
+       *<input placeholder="Which model are you Interested in ?">
+        <select >
+            <option value="Defender 90">Defender 90</option>
+            <option value="Defender 110">Defender 110</option>
+            <option value="Defender 130">Defender 130</option>
+            <option value="Discover">discover</option>
+
+        </select>
+
+    </form>
+    </div>
+    
+</body>
+</html>
